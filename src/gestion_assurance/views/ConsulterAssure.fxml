@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="477.0" prefWidth="864.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion_assurance.controllers.ConsulterAssureController">
+    <stylesheets>
+        <URL value="@/gestion_assurance/views/css/index.css" />
+    </stylesheets>
+   <children>
+      <HBox layoutX="186.0" layoutY="16.0" prefHeight="100.0" prefWidth="656.0" style="-fx-background-color: none;" styleClass="header" stylesheets="@css/index.css">
+         <children>
+            <VBox prefHeight="98.0" prefWidth="503.0">
+               <children>
+                  <Label prefHeight="47.0" prefWidth="509.0" text="Informations" textFill="#515151">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="47.0" prefWidth="509.0" text="gestion assurance / informations de l'assuré" textFill="#515151">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children></HBox>
+      <VBox layoutY="10.0" prefHeight="457.0" prefWidth="167.0" styleClass="nav_bar" stylesheets="@css/index.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="210.0" text="GESAR" textAlignment="CENTER" textFill="#a949c9">
+               <font>
+                  <Font name="Segoe UI Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#goToListeAssure" prefHeight="27.0" prefWidth="146.0" styleClass="nav_link" stylesheets="@css/index.css" text="LISTE DES ASSURES">
+               <padding>
+                  <Insets bottom="7.0" top="7.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="80.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#goToAjouterAssure" prefHeight="30.0" prefWidth="146.0" styleClass="nav_link_inactif" stylesheets="@css/index.css" text="AJOUTER">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </VBox>
+      <HBox layoutX="186.0" layoutY="135.0" prefHeight="314.0" prefWidth="293.0" style="-fx-background-color: none;" styleClass="header" stylesheets="@css/index.css">
+         <children>
+            <VBox prefHeight="312.0" prefWidth="346.0">
+               <children>
+                  <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Button graphicTextGap="2.0" mnemonicParsing="false" onMouseClicked="#print_assure" prefHeight="25.0" prefWidth="95.0" styleClass="button_green" stylesheets="@css/index.css" text="Imprimer" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="170.0" text="Informations de l'assuré">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="114.0" text="Nom">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nom_text" text="Nom" />
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="114.0" text="Prénom">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="prenom_text" text="Nom" />
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="114.0" text="Date de naissance">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date_naissance_text" text="Nom" />
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Label prefWidth="114.0" text="Lieu de naissance">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lieu_naissance_text" text="Nom" />
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Label minWidth="114.0" text="Téléphone">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="phone_text" text="Nom" />
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Label minWidth="114.0" text="Adresse">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="adresse_text" text="Nom" />
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Label minWidth="114.0" text="Profession">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="profession_text" text="Nom" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="10.0" right="15.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="modifBox" layoutX="507.0" layoutY="200.0" prefHeight="249.0" prefWidth="335.0" style="-fx-background-color: none;" styleClass="header" stylesheets="@css/index.css">
+         <children>
+            <VBox prefHeight="254.0" prefWidth="308.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="375.0">
+                     <children>
+                        <VBox prefHeight="43.0" prefWidth="155.0">
+                           <children>
+                              <Label text="Nom" />
+                              <TextField fx:id="nom_field" prefHeight="26.0" prefWidth="199.0" styleClass="input_field" stylesheets="@css/index.css" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="43.0" prefWidth="155.0">
+                           <children>
+                              <Label text="Prénom" />
+                              <TextField fx:id="prenom_field" prefHeight="26.0" prefWidth="199.0" styleClass="input_field" stylesheets="@css/index.css" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="375.0">
+                     <children>
+                        <VBox prefHeight="43.0" prefWidth="155.0">
+                           <children>
+                              <Label text="Date de naissance" />
+                              <DatePicker fx:id="date_naissance_field" prefHeight="26.0" prefWidth="220.0" styleClass="input_field" stylesheets="@css/index.css" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="43.0" prefWidth="155.0">
+                           <children>
+                              <Label text="Lieu de naissance" />
+                              <TextField fx:id="lieu_naissance_field" prefHeight="26.0" prefWidth="199.0" styleClass="input_field" stylesheets="@css/index.css" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="375.0">
+                     <children>
+                        <VBox prefHeight="43.0" prefWidth="155.0">
+                           <children>
+                              <Label text="Téléphone" />
+                              <TextField fx:id="phone_field" prefHeight="26.0" prefWidth="199.0" styleClass="input_field" stylesheets="@css/index.css" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="43.0" prefWidth="155.0">
+                           <children>
+                              <Label text="Adresse" />
+                              <TextField fx:id="adresse_field" prefHeight="26.0" prefWidth="199.0" styleClass="input_field" stylesheets="@css/index.css" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="43.0" prefWidth="383.0">
+                     <children>
+                        <VBox prefHeight="43.0" prefWidth="155.0">
+                           <children>
+                              <Label text="Profession" />
+                              <TextField fx:id="profession_field" prefHeight="26.0" prefWidth="199.0" styleClass="input_field" stylesheets="@css/index.css" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="32.0" prefWidth="308.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#update" prefHeight="27.0" prefWidth="117.0" styleClass="button_class" stylesheets="@css/index.css" text="Modifier">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="15.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="507.0" layoutY="135.0" prefHeight="47.0" prefWidth="335.0" style="-fx-background-color: none;" styleClass="header" stylesheets="@css/index.css">
+         <children>
+            <VBox prefHeight="312.0" prefWidth="346.0">
+               <children>
+                  <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="343.0">
+                     <children>
+                        <Button graphicTextGap="2.0" mnemonicParsing="false" onMouseClicked="#delete" prefHeight="25.0" prefWidth="95.0" styleClass="btn_red" stylesheets="@css/index.css" text="Supprimer" />
+                        <Button graphicTextGap="2.0" mnemonicParsing="false" onMouseClicked="#modifBoxVisible" prefHeight="25.0" prefWidth="95.0" styleClass="button_class" stylesheets="@css/index.css" text="Modifier">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="10.0" right="15.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

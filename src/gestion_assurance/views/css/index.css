@@ -1,0 +1,121 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: white;
+}
+
+.nav_bar{
+    -fx-border-width: 0px 1px 0px 0px  ;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(220, 222, 224);
+}
+
+.table_colunm{
+    -fx-background-color: white;
+    -fx-border-width: 0px 0px 1px 0px  ;
+    -fx-border-style: solid;
+    -fx-border-color: rgb(220, 222, 224);
+    -fx-alignment: CENTER;
+    -fx-padding : 17px 0px 10px 0px;
+    
+}
+
+
+
+.table-view .scroll-bar * {
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-width:0;
+    -fx-pref-height:0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+
+.table-row-cell:selected .text {
+       -fx-fill: black ;
+
+}
+
+.table-row-cell:selected .btn_red {
+       -fx-text-fill: white ;
+
+}
+
+
+
+
+.header{
+    -fx-border-style: dashed;
+    -fx-border-color: rgb(172, 127, 250);
+    -fx-border-width: 1px ;
+    -fx-border-radius: 10px;
+}
+
+.input_field{
+    -fx-border-style: solid;    
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: #beb2d1;
+    -fx-background-color:  #eeebf5;
+    -fx-control-inner-background:  #eeebf5;
+}
+
+.input_field:focus{
+    -fx-background-color: #cc99ff;
+}
+
+.button_class{
+    -fx-background-color: #903bda;
+    -fx-text-fill:#ffffff;
+    -fx-font-weight: 900;
+}
+
+.btn_red{
+    -fx-background-color: #f7313f;
+    -fx-text-fill:#ffffff !important;
+    -fx-font-weight: 900;
+}
+
+.btn_red:hover{
+    -fx-background-color: #cc2732;
+    -fx-text-fill:#ffffff;
+    -fx-font-weight: 900;
+}
+
+.button_green{
+    -fx-background-color:  #63c24c;
+    -fx-text-fill:#ffffff;
+    -fx-font-weight: 900;
+}
+
+.button_green:hover{
+    -fx-background-color:  #63d24a;
+}
+
+.button_class:hover{
+    -fx-background-color: #906bda;
+}
+
+.nav_link{
+    -fx-background-color: #903bda;
+    -fx-text-fill:#ffffff;
+    -fx-font-weight: 900;
+    -fx-font-size: 10px;
+}
+
+.nav_link:hover{
+    -fx-background-color: #624196;
+}
+
+.nav_link_inactif{
+    -fx-background-color: #dbd9de;
+    -fx-text-fill:#000000;
+    -fx-font-weight: 900;
+    -fx-font-size: 10px;
+}
+
+.nav_link_inactif:hover{
+    -fx-background-color: #cccccc;
+}
